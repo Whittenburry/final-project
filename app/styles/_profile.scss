@@ -49,13 +49,11 @@
   align-items: center;
   justify-content: center;
 
-  height: 50vh;
-
-  margin: $gutter * 5 0 0;
+  margin: $gutter * 5 0;
 
 
   &__avatar {
-    max-width: 60%;
+    width: 60%;
 
     &__img {
       width: 100%;
