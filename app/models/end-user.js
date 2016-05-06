@@ -4,5 +4,7 @@ import attr from 'ember-data/attr';
 export default Model.extend({
   email: attr('string'),
   password: attr('string'),
-  username: attr('string')
+  username: attr('string'),
+  firstName: attr('string'),
+  lastName: attr('string'),
 });

@@ -3,7 +3,7 @@
   <h1 class="solofoods">SoloFoods</h1>
 </div>
 <div class="register-outer-container">
-  <form class="register-form">
+  <form {{action login email password on="submit"}} class="register-form">
     {{paper-input class="register-form__input" label="E-mail" type="email" value=email}}
     {{paper-input class="register-form__input" label="Password" type="password" value=password}}
 
