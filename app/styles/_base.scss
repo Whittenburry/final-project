@@ -8,7 +8,12 @@ body {
 }
 
 a {
+  color: $brand-primary;
   text-decoration: none;
+
+  &:visited {
+    color: darken($brand-primary, 10%);
+  }
 }
 
 link {

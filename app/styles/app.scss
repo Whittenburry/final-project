@@ -1,8 +1,11 @@
-@import "yoga";
-@import 'variables';
+@import 'vars';
+@import 'ember-paper';
 @import 'base';
 @import 'profile';
 @import 'main';
+@import 'register';
+@import 'login';
+@import 'add-new';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
