@@ -3,11 +3,11 @@
   <h1 class="solofoods">SoloFoods</h1>
 </div>
 <div class="register-outer-container">
-  <form class="register-form">
-    {{paper-input class="register-form__input" label="First Name" value=firstName}}
-    {{paper-input class="register-form__input" label="Last Name" value=lastName}}
-    {{paper-input class="register-form__input" label="E-mail" type="email" value=email}}
-    {{paper-input class="register-form__input" label="Password" type="password" value=password}}
+  <form {{action newUser model on="submit"}} class="register-form">
+    {{paper-input class="register-form__input" label="First Name" value=model.firstName}}
+    {{paper-input class="register-form__input" label="Last Name" value=model.lastName}}
+    {{paper-input class="register-form__input" label="E-mail" type="email" value=model.email}}
+    {{paper-input class="register-form__input" label="Password" type="password" value=model.password}}
 
     <button class="register-form__button">Submit</button>
   </form>
