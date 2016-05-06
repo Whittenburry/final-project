@@ -1,0 +1,13 @@
+{{outlet}}
+<div class="register-header">
+  <h1 class="solofoods">SoloFoods</h1>
+</div>
+<div class="register-outer-container">
+  <form class="register-form">
+    {{paper-input class="register-form__input" label="Stuff for Food" value=firstName}}
+    {{paper-input class="register-form__input" label="More Stuff" value=lastName}}
+    {{paper-input class="register-form__input" label="You don't know" type="email" value=ingredients}}
+    {{paper-input class="register-form__input" label="More ingredients" value=ingredients}}
+
+    <button class="register-form__button">Submit</button>
+  </form>

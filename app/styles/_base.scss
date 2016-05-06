@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+
+  background: darken($brand-white, 1%);
+
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-primary, 10%);
+  }
+}
+
+link {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}

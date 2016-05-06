@@ -1,0 +1,17 @@
+{{outlet}}
+<div class="register-header">
+  <h1 class="solofoods">SoloFoods</h1>
+</div>
+<div class="register-outer-container">
+  <form class="register-form">
+    {{paper-input class="register-form__input" label="E-mail" type="email" value=email}}
+    {{paper-input class="register-form__input" label="Password" type="password" value=password}}
+
+    <button class="register-form__button">Login</button>
+  </form>
+
+  <div class="already-registered">
+    <h5 class="already-registered__text">Not Registered?</h5>
+    {{#link-to 'register'}}<h5 class="already-registered__click-here">Sign-up</h5>{{/link-to}}
+  </div>
+</div>
