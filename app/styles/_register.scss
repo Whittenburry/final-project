@@ -9,11 +9,14 @@
   background: $brand-primary;
 }
 
-.solofoods {
+.solefood {
   max-width: $max-content-width;
   margin: auto;
-  color: $brand-white;
-  font-family: fantasy;
+  color: $brand-secondary;
+
+  font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
+  color: $brand-secondary;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 }
 
 .register-outer-container {
@@ -53,7 +56,7 @@
     border-radius: 0.2rem;
 
     background: $brand-primary;
-    color: $brand-white;
+    color: $brand-secondary;
 
     &:hover {
       cursor: pointer;

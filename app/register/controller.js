@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     const tenderer = this.store.createRecord(`endUser`, attrs);
 
     tenderer.save().then(() => {
-      this.transitionToRoute(`profile`);
+      this.transitionToRoute(`login`);
     })
     .catch((reason) => {
       console.log(reason);
