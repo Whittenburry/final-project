@@ -2,9 +2,17 @@ body {
   margin: 0;
 
   background: darken($brand-white, 1%);
+  color: $brand-offset;
 
   font-family: sans-serif;
   font-weight: lighter;
+}
+
+input {
+}
+
+::-webkit-input-placeholder {
+  color: $brand-offset;
 }
 
 a {
