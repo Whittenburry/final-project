@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('add-new');
   this.route('register');
   this.route('login');
+  this.route('dashboard');
 });
 
 export default Router;
