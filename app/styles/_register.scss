@@ -15,7 +15,6 @@
   color: $brand-secondary;
 
   font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
-  color: $brand-secondary;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -52,11 +51,15 @@
     margin: $gutter * 2;
     padding: $gutter * 2;
 
-    border: 0;
+
     border-radius: 0.2rem;
 
     background: $brand-primary;
     color: $brand-secondary;
+
+    font-family: 'Leckerli One', Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 
     &:hover {
       cursor: pointer;

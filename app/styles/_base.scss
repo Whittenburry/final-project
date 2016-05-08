@@ -19,9 +19,9 @@ a {
   color: $brand-primary;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-primary, 10%);
-  }
+  // &:visited {
+  //   color: darken($brand-primary, 10%);
+  // }
 }
 
 link {
@@ -29,5 +29,6 @@ link {
 }
 
 button {
+  border: 0;
   outline: none;
 }

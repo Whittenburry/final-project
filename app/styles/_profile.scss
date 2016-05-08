@@ -11,7 +11,6 @@
   color: $brand-secondary;
 
   font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
-  color: $brand-secondary;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -64,7 +63,7 @@
 
       border-radius: 50%;
 
-      box-shadow: 0.2rem 0.2rem 1rem darken($brand-black, 50%);
+      box-shadow: 0.2rem 0.2rem 1rem darken($brand-offset, 35%);
     }
   }
 }
@@ -91,4 +90,8 @@
       cursor: pointer;
     }
   }
+}
+
+.logout {
+  color: $brand-offset;
 }
