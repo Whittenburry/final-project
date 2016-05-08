@@ -22,7 +22,7 @@
 
     font-family: 'Leckerli One', Helvetica, sans-serif;
     font-size: 3rem;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 0px $brand-white, 4px 4px 8px darken($brand-offset, 5%);
     text-align: center;
 
     &:first-of-type {
