@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('dashboard', function() {
     this.route('home', { path: '/home' });
     this.route('recipe-view', { path: '/:recipe' });
+    this.route('user-profile');
   });
 
   // this.route('home', {
