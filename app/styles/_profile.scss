@@ -1,15 +1,12 @@
 .profile-outer-container {
   width: 100%;
-
   margin: auto;
 }
 
 .profile-navbar-container {
   max-width: 100%;
-
   background: $brand-primary;
   color: $brand-secondary;
-
   font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 }
@@ -17,11 +14,8 @@
 .profile-navbar {
   display: flex;
   flex-direction: row;
-
   max-width: $max-content-width;
-
   margin: auto;
-
   padding: $gutter * 2;
 
   &__back {
