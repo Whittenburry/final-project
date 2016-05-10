@@ -14,9 +14,10 @@
   &__greeting {
     margin: $gutter 0;
     padding: $gutter * 1.5;
+
     color: $brand-secondary;
+
     font: 400 1.7rem 'Leckerli One', Helvetica, sans-serif;
-    color: $brand-secondary;
     text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
   }
 
@@ -32,3 +33,21 @@
     text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
   }
 }
+
+// .menu-container {
+//   position: relative;
+// }
+//
+// .menu {
+//   position: absolute;
+//   top: 10%;
+//   right: 0%;
+//
+//   width: 23.2rem;
+//
+//   margin: 0;
+//   padding: 0;
+//
+//   &__list-item {
+//   }
+// }

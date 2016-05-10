@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-disable */
 
 module.exports = function(environment) {
   var ENV = {
@@ -16,8 +16,8 @@ module.exports = function(environment) {
     },
 
     'ember-simple-auth': {
-      routeAfterAuthentication: `dashboard/user-profile`,
-      routeIfAlreadyAuthenticated: `dashboard/user-profile`,
+      routeAfterAuthentication: `dashboard.user-profile`,
+      routeIfAlreadyAuthenticated: `dashboard.user-profile`,
     },
 
     APP: {
