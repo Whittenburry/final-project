@@ -1,0 +1,14 @@
+{{outlet}}
+<div class="recipe-header">
+  <h1 class="solefood">SoleFood</h1>
+</div>
+<div class="recipe-outer-container">
+  <form {{action recipe model on="submit"}} class="recipe-form">
+    {{paper-input class="recipe-form__input" label="Recipe Name" value=model.name}}
+    {{!-- {{paper-input class="recipe-form__input" label="" value=model.lastName}} --}}
+    {{paper-input class="recipe-form__input" label="Ingredient" type="ingredient" value=model.ingredient}}
+    {{paper-input class="recipe-form__input" label="Instruction" type="instructions" value=model.instruction}}
+
+    <button class="recipe-form__button">Submit</button>
+  </form>
+</div>
