@@ -1,16 +1,16 @@
 {{outlet}}
-<div class="recipe-header">
-  <h1 class="solefood">SoleFood</h1>
-</div>
-<div class="recipe-outer-container">
-  <form {{action addRecipe model on="submit"}} class="recipe-form">
-    {{paper-input class="recipe-form__input" label="Recipe Name" value=model.name}}
-    {{!-- {{paper-input class="recipe-form__input" label="" value=model.lastName}} --}}
-    {{paper-input class="recipe-form__input" label="Ingredient" type="ingredient" value=model.ingredient}}
-    {{paper-input class="recipe-form__input" label="Instruction" type="instructions" value=model.instruction}}
+<header class="profile-header">
+  <div class="add-recipe">
+    <h1 class="solefood add-recipe__text">Add Recipe</h1>
+  </div>
+</header>
+<div class="register-outer-container">
+  <form {{action addRecipe model on="submit"}} class="register-form">
+    {{paper-input class="register-form__input" label="Recipe Name" value=model.name}}
+    {{!-- {{paper-input class="register-form__input" label="" value=model.lastName}} --}}
+    {{paper-input class="register-form__input" label="Ingredient" type="ingredient" value=model.ingredient}}
+    {{paper-input class="register-form__input" label="Instruction" type="instructions" value=model.instruction}}
 
-    <h1>This is a test!</h1>
-
-    <button class="recipe-form__button">Submit</button>
+    <button class="register-form__button">Submit</button>
   </form>
 </div>
