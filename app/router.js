@@ -8,13 +8,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('logout');
   this.route('profile');
-  this.route('add-new');
   this.route('register');
   this.route('login');
   this.route('dashboard', function() {
     this.route('home', { path: '/home' });
     this.route('recipe-view', { path: '/:recipe' });
     this.route('user-profile');
+    this.route('add-new');
   });
 
   // this.route('home', {
