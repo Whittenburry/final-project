@@ -1,2 +1,39 @@
+<h1 class="solefood">All Recipes</h1>
+
+<div class="add-recipe-container">
+  {{#link-to "dashboard.recipes.new"}}New Recipe{{/link-to}}
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
+
+  <tbody>
+    {{#each model as |recipe|}}
+      <tr>
+        <td>{{recipe.id}}.</td>
+        <td><img src="{{recipe.image}}" alt="" width="50"></td>
+        <td>{{recipe.name}}</td>
+        <td>
+          {{#link-to "dashboard.recipes.edit" recipe.id}}
+            <span class="fa fa-pencil"></span>
+          {{/link-to}}
+        </td>
+        <td>
+          <button class="btn" {{action destroyRecipe recipe}}>
+            <span class="fa fa-trash"></span>
+          </button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</div>
+
 {{outlet}}
-<h1>All Posts</h1>
