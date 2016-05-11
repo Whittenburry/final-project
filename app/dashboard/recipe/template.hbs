@@ -4,13 +4,40 @@
     <h1 class="solefood add-recipe__text">Add Recipe</h1>
   </div>
 </header>
-<div class="register-outer-container">
+{{!-- <div class="register-outer-container">
   <form {{action addRecipe model on="submit"}} class="register-form">
     {{paper-input class="register-form__input" label="Recipe Name" value=model.name}}
-    {{!-- {{paper-input class="register-form__input" label="" value=model.lastName}} --}}
     {{paper-input class="register-form__input" label="Ingredient" type="ingredient" value=model.ingredient}}
     {{paper-input class="register-form__input" label="Instruction" type="instructions" value=model.instruction}}
 
     <button class="register-form__button">Submit</button>
   </form>
+</div> --}}
+
+<div class="recipe-view-container">
+  <div class="recipe-view-fields">
+    <div class="destroy-task">
+      <h3 class="recipe-view-title">{{model.title}}</h3>
+      <button class="destroy-task__x fa fa-times"></button>
+    </div>
+    <div class="list-view-details">
+      <ul class="check-list">
+
+        {{#each model.ingredients as |ingredient|}}
+
+          <li class="check-list__box">
+             {{ingredient.name}}
+          </li>
+
+        {{/each}}
+
+      </ul>
+
+
+      <form class="add-new-task">
+        {{paper-input class="register-form__input" type="text" value=newReminder.name placeholder="What do you want to do?"}}
+        <button class="add-new-task__button">ACCEPT</button>
+      </form>
+    </div>
+  </div>
 </div>
