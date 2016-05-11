@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('recipe-view', { path: '/:recipe' });
     this.route('user-profile');
     this.route('recipe');
+    this.route('recipes', function() {});
   });
 
   // this.route('home', {
