@@ -1,1 +1,16 @@
-{{outlet}}
+<h1 class="solefood add-new-recipe-text">Add New Instruction</h1>
+
+<div class="add-recipe-container">
+
+  {{#simple-form onsubmit=(action addInstruction) as |formValues|}}
+    {{paper-input class="register-form__input" type="number" label="step" value=formValues.step}}
+    {{paper-input class="register-form__input" label="description" value=formValues.description}}
+
+    <div class="add-new-recipe">
+      {{#link-to "dashboard.recipes.detail.index" class="add-new-recipe__cancel"}}Cancel{{/link-to}}
+
+      <button class="register-form__button">Save</button>
+    </div>
+  {{/simple-form}}
+
+</div>
