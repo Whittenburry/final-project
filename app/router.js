@@ -21,6 +21,13 @@ Router.map(function() {
       this.route('edit', {
         path: '/:id'
       });
+      this.route('details');
+      this.route('detail', function() {
+        this.route('new-ingredient');
+        this.route('edit-ingredient');
+        this.route('new-instruction');
+        this.route('edit-instruction');
+      });
     });
   });
 
