@@ -3,7 +3,7 @@
 <div class="add-recipe-container">
   {{#link-to "dashboard.recipes.new"}}New Recipe{{/link-to}}
 
-  <table>
+  {{!-- <table>
     <thead>
       <tr>
         <th>Name</th>
@@ -13,13 +13,13 @@
         <th></th>
       </tr>
     </thead>
-  </table>
+  </table> --}}
 
   <tbody>
     {{#each model as |recipe|}}
       <tr>
         <td>{{recipe.id}}.</td>
-        <td><img src="{{recipe.image}}" alt="" width="50"></td>
+        <td><img src="{{recipe.image}}" alt="" width="250"></td>
         <td>{{recipe.name}}</td>
         <td>
           {{#link-to "dashboard.recipes.edit" recipe.id}}
