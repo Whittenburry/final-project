@@ -21,6 +21,7 @@ Router.map(function() {
       this.route('edit', {
         path: '/:id/edit'
       });
+
       this.route('detail', {path: '/:id'}, function() {
         this.route('new-ingredient');
         this.route('edit-ingredient');
