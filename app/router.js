@@ -19,10 +19,9 @@ Router.map(function() {
       this.route('new');
 
       this.route('edit', {
-        path: '/:id'
+        path: '/:id/edit'
       });
-      this.route('details');
-      this.route('detail', function() {
+      this.route('detail', {path: '/:id'}, function() {
         this.route('new-ingredient');
         this.route('edit-ingredient');
         this.route('new-instruction');
