@@ -1,0 +1,18 @@
+.add-new-recipe {
+  display: flex;
+  justify-content: space-between;
+
+  &__cancel {
+    margin: $gutter;
+    padding: $gutter;
+  }
+}
+
+.add-recipe-container {
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+td {
+  margin: $gutter;
+}
