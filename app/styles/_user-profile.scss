@@ -1,0 +1,91 @@
+.profile-outer-container {
+  width: 100%;
+  margin: auto;
+}
+
+.profile-navbar-container {
+  max-width: 100%;
+  background: $brand-primary;
+  color: $brand-secondary;
+  font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-navbar {
+  display: flex;
+  flex-direction: row;
+  max-width: $max-content-width;
+  margin: auto;
+  padding: $gutter * 2;
+
+  &__back {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__name {
+    width: 100%;
+    margin: 0;
+    padding: $gutter;
+
+    text-align: center;
+  }
+}
+
+.profile-inner-container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: $gutter * 5 0;
+
+
+  &__avatar {
+    width: 60%;
+
+    &__img {
+      width: 100%;
+
+      border-radius: 50%;
+
+      box-shadow: 0.2rem 0.2rem 1rem darken($brand-offset, 35%);
+    }
+  }
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__edit {
+    max-width: 70%;
+
+    margin: $gutter * 2 auto;
+
+    border: 0;
+
+    background: $brand-white;
+    color: $brand-offset;
+    font: 400 2rem 'Leckerli One', Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.logout {
+  color: $brand-offset;
+}
