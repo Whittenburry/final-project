@@ -18,8 +18,9 @@
     {{#link-to "dashboard.recipes.detail.new-instruction"}}Instruction
       <button class="new-instruction__btn fa fa-plus-circle"></button>
     {{/link-to}}
+    <h2>{{model.instructions.length}}</h2>
     <ul>
-      {{#each model as |instruction|}}
+      {{#each model.instructions as |instruction|}}
         <li>
           {{instruction.step}} {{instruction.description}}
         </li>
