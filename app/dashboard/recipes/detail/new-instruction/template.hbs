@@ -2,8 +2,8 @@
 
 <div class="add-recipe-container">
 
-  {{#simple-form onsubmit=(action addInstruction) as |formValues|}}
-    {{paper-input class="register-form__input" type="number" label="step" value=formValues.step}}
+  {{#simple-form onsubmit=(action addInstruction model) as |formValues|}}
+    {{!-- {{paper-input class="register-form__input" type="number" label="step" value=formValues.step}} --}}
     {{paper-input class="register-form__input" label="description" value=formValues.description}}
 
     <div class="add-new-recipe">
