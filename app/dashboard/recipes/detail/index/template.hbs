@@ -3,10 +3,9 @@
     <img src="{{model.image}}" class="index-image__pic" alt="">
   </div>
   <div class="index-row">
-    <div class="index-row__title">
-      {{#link-to "dashboard.recipes.detail.new-ingredient"}}Ingredient
-        <button class="detail-index__btn fa fa-plus-circle"></button>
-      {{/link-to}}
+    <div class="index-row__title-container">
+      <h3 class="solefood index-row__title">Ingredients</h3>
+      {{#link-to "dashboard.recipes.detail.new-ingredient" class="index-row__btn fa fa-plus-circle"}}{{/link-to}}
     </div>
       <ul class="index-row__ul">
         {{#each model as |ingredient|}}
@@ -15,10 +14,9 @@
           </li>
         {{/each}}
       </ul>
-    <div class="index-row__title">
-      {{#link-to "dashboard.recipes.detail.new-instruction"}}Instruction
-        <button class="detail-index__btn fa fa-plus-circle"></button>
-      {{/link-to}}
+    <div class="index-row__title-container">
+      <h3 class="solefood index-row__title">Instructions</h3>
+      {{#link-to "dashboard.recipes.detail.new-instruction" class="index-row__btn fa fa-plus-circle"}}{{/link-to}}
     </div>
       {{!-- <h2>{{model.instructions.length}}</h2> --}}
       <ul class="index-row__ul">
