@@ -13,7 +13,7 @@
 }
 
 .current-model__name {
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -32,4 +32,23 @@
 .index-row {
   display: flex;
   flex-direction: row;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+
+    padding: $gutter;
+  }
+
+  &__li {
+    display: flex;
+    flex-direction: column;
+
+    padding: $gutter;
+  }
 }
