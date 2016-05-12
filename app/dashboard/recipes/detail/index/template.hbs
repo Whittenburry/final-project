@@ -1,30 +1,32 @@
-<img src="{{model.image}}" width="300" alt="">
-
-<div class="outer-index-container">
-  <div class="inner-index-container">
-    {{#link-to "dashboard.recipes.detail.new-ingredient"}}Ingredient
-      <button class="new-ingredient__btn fa fa-plus-circle"></button>
-    {{/link-to}}
-    <ul>
-      {{#each model as |ingredient|}}
-        <li>
-          {{ingredient.quantity}} {{ingredient.unit}} {{ingredient.name}}
-        </li>
-      {{/each}}
-    </ul>
+<div class="inner-index-container">
+  <div class="index-image">
+    <img src="{{model.image}}" class="index-image__pic" alt="">
   </div>
-
-  <div class="inner-index-container">
-    {{#link-to "dashboard.recipes.detail.new-instruction"}}Instruction
-      <button class="new-instruction__btn fa fa-plus-circle"></button>
-    {{/link-to}}
-    <h2>{{model.instructions.length}}</h2>
-    <ul>
-      {{#each model.instructions as |instruction|}}
-        <li>
-          {{instruction.step}} {{instruction.description}}
-        </li>
-      {{/each}}
-    </ul>
+  <div class="index-row">
+    <div class="index-row__title">
+      {{#link-to "dashboard.recipes.detail.new-ingredient"}}Ingredient
+        <button class="detail-index__btn fa fa-plus-circle"></button>
+      {{/link-to}}
+    </div>
+      <ul class="index-row__ul">
+        {{#each model as |ingredient|}}
+          <li>
+            {{ingredient.quantity}} {{ingredient.unit}} {{ingredient.name}}
+          </li>
+        {{/each}}
+      </ul>
+    <div class="index-row__title">
+      {{#link-to "dashboard.recipes.detail.new-instruction"}}Instruction
+        <button class="detail-index__btn fa fa-plus-circle"></button>
+      {{/link-to}}
+    </div>
+      {{!-- <h2>{{model.instructions.length}}</h2> --}}
+      <ul class="index-row__ul">
+        {{#each model.instructions as |instruction|}}
+          <li>
+            {{instruction.step}} {{instruction.description}}
+          </li>
+        {{/each}}
+      </ul>
   </div>
 </div>
