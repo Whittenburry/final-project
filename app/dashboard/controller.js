@@ -1,16 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  formToggle() {
-    const navbarButton = this.document.querySelector(`.dashboard-nav__hamburger`);
-    navbarButton.addEventListener(`click`, () => {
-      this.slideForm();
-    });
-  },
+  toggleMenu() {
+    const menu = document.querySelector(`.menu-container`);
 
-  slideForm() {
-    const toggle = document.querySelector(`.dashboard-nav__hamburger`);
-
-    toggle.classList.toggle(`slide`);
+    menu.classList.toggle(`slide`);
   },
 });

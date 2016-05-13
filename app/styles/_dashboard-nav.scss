@@ -34,9 +34,6 @@
   }
 }
 
-.slide {
-  transform: translateX(0%);
-}
 
 .menu-container {
   display: flex;
@@ -60,10 +57,17 @@
   z-index: 2;
 }
 
+.slide {
+  transform: translateX(0%);
+}
+
+
 .dashboard-menu {
   padding: $gutter;
 
   &__list-item {
+    max-width: 100%;
+
     margin: 0.8rem;
     padding: $gutter;
 
@@ -72,6 +76,7 @@
     background: $brand-white;
 
     font-size: 2rem;
+    cursor: pointer;
 
     box-shadow: 0.2rem 0.2rem 0.7rem darken($brand-offset, 20%);
   }
