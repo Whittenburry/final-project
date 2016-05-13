@@ -1,19 +1,10 @@
 <div class="dashboard-nav-container">
-  <div class="dashboard-nav">
-    <button {{action toggleMenu}} id="burger" class="fa fa-bars dashboard-nav__hamburger"></button>
-    {{!-- {{#if menu}} --}}
-    <div class="menu-container">
-      <ul class="dashboard-menu">
-        {{#link-to "dashboard.recipes.new" action toggleMenu "menu"}}<li class="dashboard-menu__list-item solefood">Add New Recipe</li>{{/link-to}}
-        {{#link-to "dashboard.user-profile" action toggleMenu "menu"}}<li class="dashboard-menu__list-item solefood">Profile</li>{{/link-to}}
-        {{#link-to "dashboard.home" action toggleMenu "menu"}}<li class="dashboard-menu__list-item solefood">Discover</li>{{/link-to}}
-        {{#link-to "logout" action toggleMenu "menu"}}<li class="dashboard-menu__list-item solefood">Logout</li>{{/link-to}}
-      </ul>
-      <p {{action toggleMenu}} class="dashboard-menu__list-item solefood">Close</p>
-    </div>
-    {{!-- {{/if}} --}}
-    <h2 class="dashboard-nav__greeting">Hello, {{model.first-name}}</h2>
-  </div>
+  {{#dashboard-nav user=model as |toggleMenu|}}
+    {{dashboard-nav-item "Add New Recipe" "dashboard.recipes.new" beforeTransition=toggleMenu}}
+    {{dashboard-nav-item "Profile" "dashboard.user-profile" beforeTransition=toggleMenu}}
+    {{dashboard-nav-item "Discover" "dashboard.home" beforeTransition=toggleMenu}}
+    {{dashboard-nav-item "Logout" "logout" beforeTransition=toggleMenu}}
+  {{/dashboard-nav}}
 </div>
 
 {{outlet}}
