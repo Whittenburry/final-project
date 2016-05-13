@@ -16,6 +16,7 @@ module.exports = function(environment) {
     },
 
     'ember-simple-auth': {
+      authenticationRoute: `app-instantiation`,
       routeAfterAuthentication: `dashboard.user-profile`,
       routeIfAlreadyAuthenticated: `dashboard.user-profile`,
     },
