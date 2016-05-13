@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('app-instantiation', { path: '/' });
   this.route('logout');
   this.route('profile');
   this.route('register');
@@ -34,7 +35,6 @@ Router.map(function() {
   // this.route('home', {
   //   path: '/home'
   // });
-  this.route('app-instantiation', { path: '/' });
 });
 
 export default Router;

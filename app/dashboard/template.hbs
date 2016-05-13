@@ -1,14 +1,15 @@
 <div class="dashboard-nav-container">
   <div class="dashboard-nav">
-    <button class="fa fa-bars dashboard-nav__hamburger"></button>
-    {{!-- <div class="menu-container">
-      <ul class="menu">
-        <li class="menu__list-item">Add New Recipe</li>
-        <li class="menu__list-item">Profile</li>
-        <li class="menu__list-item">Discover</li>
-        <li class="menu__list-item">Logout</li>
+    <button {{action formToggle on="click"}} class="fa fa-bars dashboard-nav__hamburger"></button>
+    <div class="menu-container">
+      <ul class="dashboard-menu">
+        {{#link-to "dashboard.recipes.new"}}<li class="dashboard-menu__list-item solefood">Add New Recipe</li>{{/link-to}}
+        {{#link-to "dashboard.user-profile"}}<li class="dashboard-menu__list-item solefood">Profile</li>{{/link-to}}
+        {{#link-to "dashboard.home"}}<li class="dashboard-menu__list-item solefood">Discover</li>{{/link-to}}
+        {{#link-to "logout"}}<li class="dashboard-menu__list-item solefood">Logout</li>{{/link-to}}
       </ul>
-    </div> --}}
+      <p {{action formToggle}} class="dashboard-menu__list-item solefood">Close</p>
+    </div>
     <h2 class="dashboard-nav__greeting">Hello, {{model.first-name}}</h2>
   </div>
 </div>
