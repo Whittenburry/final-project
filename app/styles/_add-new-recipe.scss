@@ -1,16 +1,41 @@
+.add-new-recipe-text {
+  max-width: 100%;
+  text-align: center;
+}
+
 .add-new-recipe {
   display: flex;
   justify-content: space-between;
 
+  margin-top: $gutter * 2;
+
   &__cancel {
+    align-self: center;
+
+    width: 7rem;
+
     margin: $gutter;
-    padding: $gutter;
+    padding: $gutter * 1.5;
+
+    border-radius: 0.2rem;
+    background: $brand-primary;
+
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
   }
 }
 
 .add-recipe-container {
   max-width: $max-content-width;
   margin: auto;
+}
+
+.register-form__button {
+  width: 8.13rem;
+  margin: $gutter;
+  padding: $gutter * 1.5;
+  font-size: 1.5rem;
 }
 
 td {
