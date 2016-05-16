@@ -9,7 +9,7 @@
 {{outlet}}
 
   <div class="home-inner-container">
-    {{#each model as |recipe|}}
+    {{#each (filter-by "responses" (action belongsToCurrentUser) model) as |recipe|}}
     <header class="home-header">
       {{#link-to "dashboard.recipes" class="home-header__avatar"}}
         <img src="{{recipe.image}}" alt="" class="home-header__avatar__img">
@@ -17,10 +17,12 @@
       {{/link-to}}
     </header>
     <main class="home-content">
-      <a class="home-content__btn" href="#">
-        <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i></a>
-      <a class="home-content__btn" href="#">
-        <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i></a>
+      <button class="home-content__btn" {{action makeResponse false recipe}}>
+        <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
+      </button>
+      <button class="home-content__btn" {{action makeResponse true recipe}}>
+        <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
+      </button>
     </main>
     {{/each}}
   </div>
