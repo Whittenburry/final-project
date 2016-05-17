@@ -1,7 +1,7 @@
 {{outlet}}
 
   <div class="home-inner-container">
-    {{#each (filter-by "endUsers" (action belongsToCurrentUser) model) as |recipe|}}
+    {{#each (take 1 (filter-by "endUsers" (action belongsToCurrentUser) (shuffle model))) as |recipe|}}
     <header class="home-header">
       {{#link-to "dashboard.recipes" class="home-header__avatar"}}
         <img src="{{recipe.image}}" alt="" class="home-header__avatar__img">
