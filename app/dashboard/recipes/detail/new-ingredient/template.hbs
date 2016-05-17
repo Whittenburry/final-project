@@ -1,2 +1,20 @@
 
 <p>Hello</p>
+<h1 class="solefood add-new-recipe-text">Add New Ingredients</h1>
+
+<div class="add-recipe-container">
+
+  {{#simple-form onsubmit=(action addIngredient model) as |formValues|}}
+    {{!-- {{paper-input class="register-form__input" type="number" label="step" value=formValues.step}} --}}
+    {{paper-input class="register-form__input" label="Quantity" value=formValues.quantity}}
+    {{paper-input class="register-form__input" label="Unit" value=formValues.unit}}
+    {{paper-input class="register-form__input" label="Name" value=formValues.name}}
+
+    <div class="add-new-recipe">
+      {{#link-to "dashboard.recipes.detail.index" class="add-new-recipe__cancel"}}Cancel{{/link-to}}
+
+      <button class="register-form__button">Save</button>
+    </div>
+  {{/simple-form}}
+
+</div>
