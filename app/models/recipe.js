@@ -8,4 +8,6 @@ export default Model.extend({
   responses: hasMany('response'),
   ingredients: hasMany('ingredient'),
   instructions: hasMany('instruction'),
+
+  endUsers: Ember.computed.mapBy('responses', 'endUser')
 });
