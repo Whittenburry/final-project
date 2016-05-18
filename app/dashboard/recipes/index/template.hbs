@@ -19,7 +19,11 @@
     {{#each model as |recipe|}}
       <tr>
         <td>{{recipe.id}}.</td>
-        <td><img src="{{recipe.image}}" alt="" width="250"></td>
+        <td>
+          {{#link-to "dashboard.recipes.detail" recipe.id}}
+          <img src="{{recipe.image}}" alt="" width="250">
+          {{/link-to}}
+        </td>
         <td>{{recipe.name}}</td>
         <td>
           {{#link-to "dashboard.recipes.edit" recipe.id}}

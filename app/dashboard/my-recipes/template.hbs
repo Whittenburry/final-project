@@ -14,7 +14,7 @@
   </table> --}}
 
   <tbody>
-    {{#each filter-by model.responses as |response|}}
+    {{#each (filter-by "liked" true model.responses) as |response|}}
       <tr>
         <td>{{response.recipe.id}}.</td>
         <td><img src="{{response.recipe.image}}" alt="" width="250"></td>

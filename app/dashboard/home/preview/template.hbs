@@ -1,7 +1,27 @@
-{{outlet}}
+<div class="modal-container">
+  <div class="modal">
 
-{{model.name}}
+    <div class="modal__field">
+      <h3 class="modal__name">{{model.name}}</h3>
+    </div>
 
-{{#each model.ingredients as |i|}}
-<li>HI{{i.id}}</li>
-{{/each}}
+    <div class="modal__field">
+      <h3 class="modal__label">Ingredients</h3>
+      <ul class="modal__details">
+        {{#each model.ingredients as |ingredient|}}
+          <li class="modal__details__item">{{ingredient.name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="modal__field">
+      <h3 class="modal__label">Instructions</h3>
+      <ul class="modal__details">
+        {{#each model.instructions as |instruction|}}
+          <li class="modal__details__item">{{instruction.description}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+</div>
