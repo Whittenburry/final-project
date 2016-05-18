@@ -10,7 +10,7 @@
   background: $brand-primary;
   color: $brand-secondary;
 
-  font: 400 3rem 'Leckerli One', Helvetica, sans-serif;
+  font-family: Ubuntu Condensed, sans-serif;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 }
 
@@ -96,7 +96,7 @@
     background: $brand-white;
     color: $brand-offset;
 
-    font: 400 2rem 'Leckerli One', Helvetica, sans-serif;
+    font: 400 2rem 'Ubuntu Condensed', sans-serif;
     text-align: center;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
 
