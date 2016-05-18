@@ -27,6 +27,7 @@
           <li class="index-row__li">
             {{instruction.step}} {{instruction.description}}
           </li>
+        {{#link-to "dashboard.recipes.detail.edit-instruction" instruction.id class="index-row__btn fa fa-pencil"}}{{/link-to}}
         {{/each}}
       </ul>
   </div>
