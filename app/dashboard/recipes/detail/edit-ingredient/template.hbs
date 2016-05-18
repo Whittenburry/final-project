@@ -4,6 +4,8 @@
 <div class="add-recipe-container">
 
   {{#simple-form startingValues=model onsubmit=(action updateIngredient model) as |formValues|}}
+    {{paper-input class="register-form__input" label="Enter Quantity" value=formValues.quantity}}
+    {{paper-input class="register-form__input" label="Enter Unit" value=formValues.unit}}
     {{paper-input class="register-form__input" label="Enter Name" value=formValues.name}}
 
     <div class="add-new-recipe">
