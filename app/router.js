@@ -28,11 +28,11 @@ Router.map(function() {
         path: '/:id/edit'
       });
 
-      this.route('detail', {path: '/:id'}, function() {
+      this.route('detail', { path: '/:id' }, function() {
         this.route('new-ingredient');
-        this.route('edit-ingredient');
+        this.route('edit-ingredient', { path: '/ingredient/:ingredient_id' });
         this.route('new-instruction');
-        this.route('edit-instruction');
+        this.route('edit-instruction', { path: '/instruction/:instruction_id' });
       });
     });
   });

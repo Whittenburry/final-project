@@ -20,19 +20,16 @@
       <h3 class="recipe-view-title">{{model.title}}</h3>
       <button class="destroy-task__x fa fa-times"></button>
     </div>
+
     <div class="list-view-details">
       <ul class="check-list">
 
         {{#each model.ingredients as |ingredient|}}
-
           <li class="check-list__box">
              {{ingredient.name}}
           </li>
-
         {{/each}}
-
       </ul>
-
 
       <form class="add-new-task">
         {{paper-input class="register-form__input" type="text" value=newReminder.name placeholder="What do you want to do?"}}

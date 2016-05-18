@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model({
-    id,
+    ingredient_id,
   }) {
-    return this.store.findRecord(`ingredient`, id);
+    return this.store.findRecord(`ingredient`, ingredient_id);
   },
 });
