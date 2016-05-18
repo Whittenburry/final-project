@@ -70,7 +70,9 @@
   &__li {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    padding: $gutter;
+    // padding: $gutter;
   }
 }
