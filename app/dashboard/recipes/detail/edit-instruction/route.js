@@ -1,5 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // Loads current instruction by
+  model({
+    id,
+  }) {
+    return this.store.findRecord(`instruction`, id);
+  },
 });

@@ -1,4 +1,11 @@
-em import Ember from 'ember';
+import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Route.extend({
+  updateIngredient(ingredient, formValues) {
+    ingredient.setProperties(formValues);
+
+    ingredient.save().then(() => {
+      this.transitionToRoute(`dashboard.recipes.index`);
+    });
+  },
 });
