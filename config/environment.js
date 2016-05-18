@@ -15,6 +15,10 @@ module.exports = function(environment) {
       }
     },
 
+    googleFonts: [
+      'Ubuntu Condensed:400',
+    ],
+
     'ember-simple-auth': {
       authenticationRoute: `app-instantiation`,
       routeAfterAuthentication: `dashboard.home`,

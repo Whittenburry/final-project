@@ -1,25 +1,20 @@
-{{outlet}}
+<div class="home-inner-container">
+  {{#each (take 1 (filter-by "endUsers" (action belongsToCurrentUser) (shuffle model))) as |recipe|}}
+  <header class="home-header">
+    {{#link-to "dashboard.home.preview" recipe.id class="home-header__avatar"}}
+      <img src="{{recipe.image}}" alt="" class="home-header__avatar__img">
+      <h3 class="solefood">{{recipe.name}}</h3>
+    {{/link-to}}
+  </header>
+  <main class="home-content">
+    <button class="home-content__btn" {{action makeResponse false recipe}}>
+      <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
+    </button>
+    <button class="home-content__btn" {{action makeResponse true recipe}}>
+      <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
+    </button>
+  </main>
+  {{/each}}
+</div>
 
-  <div class="home-inner-container">
-    {{#each (take 1 (filter-by "endUsers" (action belongsToCurrentUser) (shuffle model))) as |recipe|}}
-    <header class="home-header">
-      {{#link-to "dashboard.recipes" class="home-header__avatar"}}
-        <img src="{{recipe.image}}" alt="" class="home-header__avatar__img">
-        <h3 class="solefood">{{recipe.name}}</h3>
-      {{/link-to}}
-    </header>
-    <div class="modal-card">
-      <i class="fa fa-times modal-escape"></i>
-      <p class="modal-title">{{recipe.ingredients}}</p>
-      <p class="modal-description">{{recipe.instructions}}</p>
-    </div>
-    <main class="home-content">
-      <button class="home-content__btn" {{action makeResponse false recipe}}>
-        <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
-      </button>
-      <button class="home-content__btn" {{action makeResponse true recipe}}>
-        <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
-      </button>
-    </main>
-    {{/each}}
-  </div>
+{{outlet}}

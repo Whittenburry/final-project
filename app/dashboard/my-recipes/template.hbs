@@ -1,8 +1,6 @@
 <h1 class="solefood">All Recipes</h1>
 
 <div class="add-recipe-container">
-  {{#link-to "dashboard.recipes.new"}}New Recipe{{/link-to}}
-
   {{!-- <table>
     <thead>
       <tr>
@@ -16,20 +14,16 @@
   </table> --}}
 
   <tbody>
-    {{#each model as |recipe|}}
+    {{#each filter-by model.responses as |response|}}
       <tr>
-        <td>{{recipe.id}}.</td>
-        <td><img src="{{recipe.image}}" alt="" width="250"></td>
-        <td>{{recipe.name}}</td>
+        <td>{{response.recipe.id}}.</td>
+        <td><img src="{{response.recipe.image}}" alt="" width="250"></td>
+        <td>{{response.recipe.name}}</td>
+        <td><span class="fa fa-thumbs-{{if response.liked "up" "down"}}"></span></td>
         <td>
-          {{#link-to "dashboard.recipes.edit" recipe.id}}
+          {{#link-to "dashboard.recipes.edit" response.recipe.id}}
             <span class="fa fa-pencil"></span>
           {{/link-to}}
-        </td>
-        <td>
-          <button class="btn" {{action destroyRecipe recipe}}>
-            <span class="fa fa-trash"></span>
-          </button>
         </td>
       </tr>
     {{/each}}
