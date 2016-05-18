@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
     const loggedinUser = this.get(`session.data.authenticated.user.id`);
 
     return !users.any((current) => {
-      return current.get(`id`) == loggedinUser;
+      return current.get(`id`) === loggedinUser;
     });
   },
 
