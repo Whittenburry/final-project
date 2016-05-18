@@ -43,10 +43,16 @@
 .home-inner-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 
+  width: 100%;
   max-width: $max-content-width;
 
   margin: auto;
+
+  &__liquid {
+    flex-grow: 1;
+  }
 }
 
 .home-header {

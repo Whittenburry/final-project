@@ -12,10 +12,15 @@ Router.map(function() {
   this.route('register');
   this.route('login');
   this.route('dashboard', function() {
-    this.route('home', { path: '/home' });
+    this.route('home', { path: '/home' }, function() {
+      this.route('preview', {
+        path: '/preview/:recipe_id'
+      });
+    });
     this.route('recipe-view', { path: '/:recipe' });
     this.route('user-profile');
     this.route('recipe');
+    this.route('my-recipes');
     this.route('recipes', function() {
       this.route('new');
 
@@ -35,12 +40,6 @@ Router.map(function() {
   // this.route('home', {
   //   path: '/home'
   // });
-
-  this.route('app', function() {
-    this.route('dashboard', function() {
-      this.route('my-recipes');
-    });
-  });
 });
 
 export default Router;

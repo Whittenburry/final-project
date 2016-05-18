@@ -4,7 +4,7 @@ body {
   // background: darken($brand-white, 1%);
   color: $brand-offset;
 
-  font-family: sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: lighter;
 }
 
@@ -39,4 +39,10 @@ ul {
 
 li {
   list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
