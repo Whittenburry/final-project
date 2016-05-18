@@ -35,6 +35,12 @@ Router.map(function() {
   // this.route('home', {
   //   path: '/home'
   // });
+
+  this.route('app', function() {
+    this.route('dashboard', function() {
+      this.route('my-recipes');
+    });
+  });
 });
 
 export default Router;
