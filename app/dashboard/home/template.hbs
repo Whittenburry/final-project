@@ -8,6 +8,11 @@
         <h3 class="solefood">{{recipe.name}}</h3>
       {{/link-to}}
     </header>
+    <div class="modal-card">
+      <i class="fa fa-times modal-escape"></i>
+      <p class="modal-title">{{recipe.ingredients}}</p>
+      <p class="modal-description">{{recipe.instructions}}</p>
+    </div>
     <main class="home-content">
       <button class="home-content__btn" {{action makeResponse false recipe}}>
         <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
