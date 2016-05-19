@@ -74,6 +74,7 @@
 
   &__click-here {
     margin: $spacing $spacing $spacing 0;
+    color: $brand-secondary;
 
     &:hover {
       cursor: pointer;
