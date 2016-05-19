@@ -70,7 +70,7 @@
   &__li {
     display: flex;
     flex-direction: column;
-
-    padding: $spacing;
+    align-items: space-between;
+    // padding: $gutter;
   }
 }
