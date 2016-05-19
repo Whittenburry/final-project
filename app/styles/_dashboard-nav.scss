@@ -1,6 +1,7 @@
 .dashboard-nav-container {
   // border-bottom: 0.5rem solid $brand-secondary;
   background: $brand-primary;
+  box-shadow: $less-awesome;
 }
 
 .dashboard-nav {
@@ -53,8 +54,7 @@
 
   text-align: center;
 
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.46),
-  0 14px 22px 0 rgba(0,0,0,0.12);
+  box-shadow: $awesome;
 
   z-index: 2;
 }

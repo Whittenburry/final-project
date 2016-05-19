@@ -1,0 +1,32 @@
+{{#if routeBack}}
+  <div class="recipe-card__actions-top">
+    {{#link-to routeBack}}
+      <div class="fa fa-arrow-left fa-2x"></div>
+    {{/link-to}}
+  </div>
+{{/if}}
+
+<div class="recipe-card__field home-header">
+  <h2 class="recipe-card__name">{{recipe.name}}</h2>
+  <div class="img-frame">
+    <img src="{{recipe.image}}" alt="" class="recipe-card__image">
+  </div>
+</div>
+
+<div class="recipe-card__field home-header">
+  <h3 class="recipe-card__label">Ingredients</h3>
+  <ul class="recipe-card__details">
+    {{#each recipe.ingredients as |ingredient|}}
+      <li class="recipe-card__details__item">{{ingredient.name}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="recipe-card__field home-header">
+  <h3 class="recipe-card__label">Instructions</h3>
+  <ul class="recipe-card__details">
+    {{#each recipe.instructions as |instruction|}}
+      <li class="recipe-card__details__item">{{instruction.description}}</li>
+    {{/each}}
+  </ul>
+</div>
