@@ -1,4 +1,5 @@
 .add-new-recipe-text {
+
   max-width: 100%;
   text-align: center;
 }
@@ -20,6 +21,8 @@
     border-radius: 0.2rem;
     background: $brand-primary;
 
+    color: $brand-secondary;
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
