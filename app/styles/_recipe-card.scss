@@ -2,6 +2,7 @@
   max-width: $max-content-width;
 
   margin: auto;
+  font-family: 'Ubuntu Condensed', sans-serif;
 
   &__actions-top {
     margin: 0 (-$gutter + $spacing * 1.5);
