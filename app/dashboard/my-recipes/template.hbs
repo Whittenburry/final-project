@@ -1,33 +1,9 @@
-<h1 class="solefood">All Recipes</h1>
+<div class="page">
+  <h1 class="solefood">My Recipes</h1>
 
-<div class="add-recipe-container">
-  {{!-- <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Image</th>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-  </table> --}}
+  {{#each (filter-by "liked" true model.responses) as |response|}}
+    {{recipe-card recipe=response.recipe}}
+  {{/each}}
 
-  <tbody>
-    {{#each (filter-by "liked" true model.responses) as |response|}}
-      <tr>
-        <td>{{response.recipe.id}}.</td>
-        <td><img src="{{response.recipe.image}}" alt="" width="250"></td>
-        <td>{{response.recipe.name}}</td>
-        <td><span class="fa fa-thumbs-{{if response.liked "up" "down"}}"></span></td>
-        <td>
-          {{#link-to "dashboard.recipes.edit" response.recipe.id}}
-            <span class="fa fa-pencil"></span>
-          {{/link-to}}
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
+  {{outlet}}
 </div>
-
-{{outlet}}
