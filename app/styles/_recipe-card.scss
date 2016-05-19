@@ -1,0 +1,13 @@
+.recipe-card {
+  max-width: $max-content-width;
+
+  margin: auto;
+
+  &__actions-top {
+    margin: 0 (-$gutter + $spacing * 1.5);
+  }
+
+  &__label {
+    align-self: flex-start;
+  }
+}

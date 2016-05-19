@@ -12,8 +12,8 @@
   margin: auto;
 
   &__greeting {
-    margin: $gutter 0;
-    padding: $gutter * 1.5;
+    margin: $spacing 0;
+    padding: $spacing * 1.5;
 
     color: $brand-secondary;
 
@@ -22,13 +22,13 @@
   }
 
   &__hamburger {
-    padding: $gutter * 1.5;
+    padding: $spacing * 1.5;
 
     border: 0;
     background: transparent;
     color: $brand-secondary;
 
-    font-family: 2rem 'Ubuntu Condensed', sans-serif;
+    font-size: 1.8rem;
     // text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
   }
 }
@@ -65,13 +65,13 @@
 
 
 .dashboard-menu {
-  padding: $gutter;
+  padding: $spacing;
 
   &__list-item {
     max-width: 100%;
 
     margin: 0.8rem;
-    padding: $gutter;
+    padding: $spacing;
 
     border-radius: 0.1rem;
 
