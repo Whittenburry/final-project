@@ -20,6 +20,7 @@ module.exports = function(environment) {
       'Ubuntu Condensed: 400',
       'Droid Sans: 400, 700',
       'Lato: 100, 900',
+      'Rye: 400',
     ],
 
     'ember-simple-auth': {
