@@ -10,4 +10,6 @@ export default Model.extend({
   lastName: attr('string'),
 
   responses: hasMany(`response`),
+
+  responseIds: Ember.computed.mapBy(`responses`, `id`),
 });

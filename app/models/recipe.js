@@ -9,5 +9,5 @@ export default Model.extend({
   ingredients: hasMany('ingredient'),
   instructions: hasMany('instruction'),
 
-  endUsers: Ember.computed.mapBy('responses', 'endUser')
+  responseIds: Ember.computed.mapBy(`responses`, `id`),
 });
