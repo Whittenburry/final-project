@@ -1,4 +1,4 @@
-<div class="dashboard-nav">
+<div class="dashboard-nav" {{action toggleProperty "active" on="swipeLeft"}}>
   <button {{action toggleProperty "active"}} id="burger" class="fa fa-bars dashboard-nav__hamburger"></button>
   {{!-- {{#if menu}} --}}
   <div class="menu-container {{if active "slide"}}">
