@@ -2,7 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'https://tender-api.herokuapp.com',
+    // apiHost: 'https://tender-api.herokuapp.com',
+    apiHost: 'https://still-castle-56624.herokuapp.com',
 
     modulePrefix: 'final-project',
     environment: environment,
