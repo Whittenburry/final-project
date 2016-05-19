@@ -7,7 +7,7 @@ export function existsInBoth([user]/*, hash*/) {
     console.log(user.get(`responseIds`));
 
     return _.intersection(responseIds, userResponses).length >= 1;
-  }
+  };
 }
 
 export default Ember.Helper.helper(existsInBoth);
