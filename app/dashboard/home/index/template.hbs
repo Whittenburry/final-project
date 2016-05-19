@@ -1,16 +1,25 @@
 <div class="page">
-  {{#each (take 1 (filter-by "endUsers" (action notRespondedByCurrentUser) model)) as |recipe|}}
-    {{#liquid-bind recipe use="crossFade" as |liquidRecipe|}}
-      {{tinder-card swipeLeft=(action makeResponse false liquidRecipe) swipeRight=(action makeResponse true liquidRecipe) recipe=liquidRecipe}}
+  {{#with-service "current-user" as |currentUser|}}
+    {{#each (take 1 (reject-by "responseIds" (action (exists-in-both currentUser.user)) model)) as |recipe|}}
+      {{#if recipe.responses.isPending}}
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      {{else}}
+        {{#liquid-bind recipe use="crossFade" as |liquidRecipe|}}
+        {{tinder-card swipeLeft=(action makeResponse false liquidRecipe currentUser.user) swipeRight=(action makeResponse true liquidRecipe currentUser.user) recipe=liquidRecipe}}
 
-      <main class="home-content">
-        <button class="home-content__btn" {{action makeResponse false liquidRecipe}}>
-          <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
-        </button>
-        <button class="home-content__btn" {{action makeResponse true liquidRecipe}}>
-          <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
-        </button>
-      </main>
-    {{/liquid-bind}}
-  {{/each}}
+        <main class="home-content">
+          <button class="home-content__btn" {{action makeResponse false liquidRecipe currentUser.user}}>
+            <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
+          </button>
+          <button class="home-content__btn" {{action makeResponse true liquidRecipe currentUser.user}}>
+            <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
+          </button>
+        </main>
+        {{/liquid-bind}}
+      {{/if}}
+    {{else}}
+      <h2>No new recipes. Maybe share your favorites?</h2>
+    {{/each}}
+  {{/with-service}}
 </div>
