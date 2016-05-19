@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     const recipe = this.store.createRecord(`recipe`, formValues);
 
     recipe.save().then(() => {
-      this.transitionToRoute(`dashboard.recipes.index`)
+      this.transitionToRoute(`dashboard.recipes.index`);
     });
   },
 });
