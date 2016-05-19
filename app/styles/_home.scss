@@ -79,7 +79,10 @@
   margin: $spacing * 4;
 
   &__btn {
-
+    border: 0;
+    outline: none;
+    background: $brand-white;
+    color: $brand-offset;
   }
 
 
