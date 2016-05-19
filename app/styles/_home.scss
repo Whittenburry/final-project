@@ -21,7 +21,7 @@
   max-width: $max-content-width;
 
   margin: auto;
-  padding: $gutter * 2;
+  padding: $spacing * 2;
 
   &__back {
     align-self: center;
@@ -34,7 +34,7 @@
     width: 100%;
 
     margin: 0;
-    padding: $gutter;
+    padding: $spacing;
 
     text-align: center;
   }
@@ -57,26 +57,11 @@
 
 .home-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  margin: $gutter * 2;
-
-
-  &__avatar {
-    max-width: $max-content-width;
-    height: 70vh;
-
-    overflow: hidden;
-
-    &__img {
-      width: 100%;
-
-      margin: auto;
-
-      box-shadow: 0.2rem 0.2rem 1rem darken($brand-offset, 35%);
-    }
-  }
+  margin: $spacing * 2;
 }
 
 .home-content {
@@ -85,7 +70,7 @@
   align-items: center;
   justify-content: space-around;
 
-  margin: $gutter * 4;
+  margin: $spacing * 4;
 
   &__btn {
 
@@ -95,7 +80,7 @@
   &__edit {
     max-width: 70%;
 
-    margin: $gutter * 2 auto;
+    margin: $spacing * 2 auto;
 
     border: 0;
 

@@ -16,7 +16,7 @@
 //   flex-direction: row;
 //   max-width: $max-content-width;
 //   margin: auto;
-//   padding: $gutter * 2;
+//   padding: $spacing * 2;
 //
 //   &__back {
 //     align-self: center;
@@ -27,7 +27,7 @@
 //   &__name {
 //     width: 100%;
 //     margin: 0;
-//     padding: $gutter;
+//     padding: $spacing;
 //
 //     text-align: center;
 //   }
@@ -46,7 +46,7 @@
 //   align-items: center;
 //   justify-content: center;
 //
-//   margin: $gutter * 5 0;
+//   margin: $spacing * 5 0;
 //
 //
 //   &__avatar {
@@ -70,7 +70,7 @@
 //   &__edit {
 //     max-width: 70%;
 //
-//     margin: $gutter * 2 auto;
+//     margin: $spacing * 2 auto;
 //
 //     border: 0;
 //

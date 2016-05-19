@@ -16,7 +16,7 @@ input {
 }
 
 a {
-  color: $brand-primary;
+  color: $brand-offset;
   text-decoration: none;
 
   // &:visited {
@@ -41,8 +41,16 @@ li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.page {
+  padding: 0 $gutter;
 }
