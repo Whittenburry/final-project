@@ -17,7 +17,7 @@
   <h3 class="recipe-card__label">Ingredients</h3>
   <ul class="recipe-card__details">
     {{#each recipe.ingredients as |ingredient|}}
-      <li class="recipe-card__details__item">{{ingredient.name}}</li>
+      <li class="recipe-card__details__item">{{ingredient.quantity}}{{ingredient.unit}} {{ingredient.name}}</li>
     {{/each}}
   </ul>
 </div>
@@ -26,7 +26,7 @@
   <h3 class="recipe-card__label">Instructions</h3>
   <ul class="recipe-card__details">
     {{#each recipe.instructions as |instruction|}}
-      <li class="recipe-card__details__item">{{instruction.description}}</li>
+      <li class="recipe-card__details__item">{{instruction.step}} {{instruction.description}}</li>
     {{/each}}
   </ul>
 </div>

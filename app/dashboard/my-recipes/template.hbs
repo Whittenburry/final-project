@@ -5,5 +5,11 @@
     {{recipe-card recipe=response.recipe}}
   {{/each}}
 
+  {{#if model.responses}}
+    <button {{action resetLikes model}}>Reset Likes</button>
+  {{else}}
+    <h3 class="solefood">You haven't liked any recipes yet! {{#link-to "dashboard.home" class="underlined"}}Get going and discover moar!{{/link-to}}</h3>
+  {{/if}}
+
   {{outlet}}
 </div>
