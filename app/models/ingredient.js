@@ -4,7 +4,7 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr(),
-  quantity: attr('number'),
+  quantity: attr(`number`),
   unit: attr(),
-  recipe: belongsTo('recipe'),
+  recipe: belongsTo(`recipe`),
 });
