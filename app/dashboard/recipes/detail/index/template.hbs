@@ -14,7 +14,7 @@
       {{#each model.ingredients as |ingredient|}}
         <li class="index-row__li">
           {{ingredient.quantity}} {{ingredient.unit}} {{ingredient.name}}
-          {{#link-to "dashboard.recipes.detail.edit-ingredient" ingredient.id class="index-row__btn fa fa-pencil" }}{{/link-to}}
+          {{#link-to "dashboard.recipes.detail.edit-ingredient" ingredient.id class="index-row__btn fa fa-pencil-square" }}{{/link-to}}
       </li>
       {{/each}}
 
@@ -30,7 +30,7 @@
       {{#each model.instructions as |instruction|}}
         <li class="index-row__li">
           {{instruction.step}} {{instruction.description}}
-          {{#link-to "dashboard.recipes.detail.edit-instruction" instruction.id class="index-row__btn fa fa-pencil" }}{{/link-to}}
+          {{#link-to "dashboard.recipes.detail.edit-instruction" instruction.id class="index-row__btn fa fa-pencil-square" }}{{/link-to}}
         </li>
       {{/each}}
 
