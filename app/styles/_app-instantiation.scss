@@ -1,3 +1,14 @@
+.register-header {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: $spacing 0;
+
+  background: $brand-primary;
+}
+
 .app-instantiation {
   display: flex;
   flex-direction: column;
@@ -5,14 +16,14 @@
 
   max-width: $max-content-width;
 
-  margin: auto;
+  margin: 0 auto;
 
   &__link {
     align-self: center;
 
     min-width: 50%;
 
-    margin-top: 2.5rem;
+    margin-top: 5%;
     padding: $spacing * 2;
 
     border-radius: 0.4rem;
@@ -26,7 +37,7 @@
     text-align: center;
 
     &:first-of-type {
-      margin-top: 10%;
+      margin-top: 5%;
     }
   }
 }

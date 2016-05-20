@@ -1,20 +1,13 @@
-.register-header {
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-
-  padding: $spacing * 4 0;
-
-  background: $brand-primary;
-}
-
 .solefood {
   max-width: $max-content-width;
   margin: auto;
   color: $brand-secondary;
   font-family: 'Ubuntu Condensed', sans-serif;
   // text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+.solefood-logo {
+  margin-top: 0;
 }
 
 .register-outer-container {
