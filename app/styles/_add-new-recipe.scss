@@ -1,7 +1,7 @@
-.add-new-recipe-text {
+.add-recipe-container {
+  max-width: $max-content-width;
 
-  max-width: 100%;
-  text-align: center;
+  margin: $gutter auto;
 }
 
 .add-new-recipe {
@@ -27,18 +27,6 @@
     text-align: center;
     cursor: pointer;
   }
-}
-
-.add-recipe-container {
-  max-width: $max-content-width;
-  margin: auto;
-}
-
-.register-form__button {
-  width: 8.13rem;
-  margin: $spacing;
-  padding: $spacing * 1.5;
-  font-size: 1.5rem;
 }
 
 td {

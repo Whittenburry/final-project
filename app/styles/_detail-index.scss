@@ -12,7 +12,6 @@
 }
 
 .current-model__name {
-
   font-size: 2rem;
   text-align: center;
 }
@@ -38,11 +37,12 @@
   &__title-container {
     display: flex;
     justify-content: space-between;
+
+    max-width: 20%;
   }
 
   &__title {
     display: flex;
-    flex-direction: row;
 
     margin: $spacing;
 
@@ -50,28 +50,43 @@
   }
 
   &__btn {
-    flex-grow: 1;
     align-self: center;
-
-    margin: $spacing;
 
     background: transparent;
     color: $brand-offset;
 
     font-size: 2rem;
+
+    &:hover {
+      color: $brand-secondary;
+      cursor: pointer;
+    }
+
+    &__pencil:hover {
+      color: $brand-secondary;
+      cursor: pointer;
+    }
+
+    &__circle:hover {
+      color: $brand-secondary;
+      cursor: pointer;
+    }
   }
 
   &__ul {
     display: flex;
     flex-direction: column;
 
+    max-width: 35%;
+
     padding: $spacing;
   }
 
   &__li {
     display: flex;
-    flex-direction: column;
-    align-items: space-between;
+    justify-content: space-between;
+
+    margin: $spacing;
     // padding: $gutter;
   }
 }

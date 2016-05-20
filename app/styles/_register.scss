@@ -1,6 +1,14 @@
-.solefood {
+.headline-text-container {}
+
+.headline-text {
   max-width: $max-content-width;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.solefood {
+  margin: $gutter;
+  padding-top: $spacing;
+
   color: $brand-secondary;
   font-family: 'Ubuntu Condensed', sans-serif;
   // text-shadow: 2px 2px 0px rgba(0,0,0,0.2), 4px 4px 8px rgba(0,0,0,0.2);
@@ -73,4 +81,11 @@
       cursor: pointer;
     }
   }
+}
+
+.register-form__button {
+  width: 8.13rem;
+  margin: $spacing;
+  padding: $spacing * 1.5;
+  font-size: 1.5rem;
 }
