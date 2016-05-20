@@ -1,7 +1,12 @@
 {{outlet}}
-<div class="register-header">
+{{!-- <div class="register-header">
   <h1 class="solefood">SoleFood</h1>
+</div> --}}
+
+<div class="register-header">
+  <p class="solefood-logo"><img src="images/SoleFoodLogoFINAL.png" alt="SoleFoodLogo"></p>
 </div>
+
 <div class="register-outer-container">
   <form {{action login email password on="submit"}} class="register-form">
     {{paper-input class="register-form__input" label="E-mail" type="email" value=email}}
