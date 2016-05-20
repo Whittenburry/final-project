@@ -1,19 +1,11 @@
-<h1 class="solefood">All Recipes</h1>
+<div class="headline-text-container">
+  <div class="headline-text">
+    <h1 class="solefood add-new-recipe-text">All Recipes</h1>
+  </div>
+</div>
 
 <div class="add-recipe-container">
   {{#link-to "dashboard.recipes.new"}}New Recipe{{/link-to}}
-
-  {{!-- <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Image</th>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-  </table> --}}
 
   <tbody>
     {{#each model as |recipe|}}

@@ -8,6 +8,22 @@
     margin: 0 (-$gutter + $spacing * 1.5);
   }
 
+  &__name {
+    margin-top: 0;
+  }
+
+  &__details {
+    align-self: flex-start;
+
+    margin: $spacing;
+    padding: 0;
+
+    &__item {
+      margin: $spacing;
+      padding: 0;
+    }
+  }
+
   &__label {
     align-self: flex-start;
   }

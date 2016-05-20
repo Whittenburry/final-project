@@ -1,6 +1,6 @@
 <div class="inner-index-container">
-  <div class="index-image">
-    <img src="{{model.image}}" class="index-image__pic" alt="">
+  <div class="img-frame">
+    <img src="{{model.image}}" alt="">
   </div>
 
   <div class="index-row">
@@ -13,8 +13,8 @@
     <ul class="index-row__ul">
       {{#each model.ingredients as |ingredient|}}
         <li class="index-row__li">
-          {{ingredient.quantity}} {{ingredient.unit}} {{ingredient.name}}
-          {{#link-to "dashboard.recipes.detail.edit-ingredient" ingredient.id class="index-row__btn fa fa-pencil-square" }}{{/link-to}}
+          {{ingredient.quantity}} - {{ingredient.unit}} {{ingredient.name}}
+          {{#link-to "dashboard.recipes.detail.edit-ingredient" ingredient.id class="index-row__btn__pencil fa fa-pencil-square" }}{{/link-to}}
       </li>
       {{/each}}
 
@@ -29,8 +29,8 @@
     <ul class="index-row__ul">
       {{#each model.instructions as |instruction|}}
         <li class="index-row__li">
-          {{instruction.step}} {{instruction.description}}
-          {{#link-to "dashboard.recipes.detail.edit-instruction" instruction.id class="index-row__btn fa fa-pencil-square" }}{{/link-to}}
+          {{instruction.step}}. {{instruction.description}}
+          {{#link-to "dashboard.recipes.detail.edit-instruction" instruction.id class="index-row__btn__pencil fa fa-pencil-square" }}{{/link-to}}
         </li>
       {{/each}}
 
