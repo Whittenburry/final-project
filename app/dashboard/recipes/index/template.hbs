@@ -5,18 +5,18 @@
 </div>
 
 <div class="add-recipe-container">
-  {{#link-to "dashboard.recipes.new"}}New Recipe{{/link-to}}
+  {{#link-to "dashboard.recipes.new" class="register-form__button"}}New Recipe{{/link-to}}
 
   <tbody>
     {{#each model as |recipe|}}
       <tr>
         <td>{{recipe.id}}.</td>
-        <td>
+        <td class="img-frame">
           {{#link-to "dashboard.recipes.detail" recipe.id}}
           <img src="{{recipe.image}}" alt="" width="250">
           {{/link-to}}
         </td>
-        <td>{{recipe.name}}</td>
+        <td class="solefood">{{recipe.name}}</td>
         <td>
           {{#link-to "dashboard.recipes.edit" recipe.id}}
             <span class="fa fa-pencil"></span>
