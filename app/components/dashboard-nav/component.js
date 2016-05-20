@@ -4,5 +4,9 @@ import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 export default Ember.Component.extend(RecognizerMixin, {
   recognizers: 'swipe',
 
-  tagName: ``,
+  classNames: [`dashboard-nav`],
+
+  swipeLeft() {
+    this.toggleProperty(`active`);
+  },
 });
