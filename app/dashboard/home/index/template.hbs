@@ -10,10 +10,10 @@
 
         <main class="home-content">
           <button class="home-content__btn" {{action makeResponse false liquidRecipe currentUser.user}}>
-            <i class="fa fa-times-circle fa-4x" aria-hidden="true"></i>
+            <i class="fa fa-thumbs-down fa-4x" aria-hidden="true"></i>
           </button>
           <button class="home-content__btn" {{action makeResponse true liquidRecipe currentUser.user}}>
-            <i class="fa fa-check-circle fa-4x" aria-hidden="true"></i>
+            <i class="fa fa-thumbs-up fa-4x thumbs-up" aria-hidden="true"></i>
           </button>
         </main>
         {{/liquid-bind}}

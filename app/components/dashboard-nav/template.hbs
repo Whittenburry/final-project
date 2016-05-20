@@ -1,12 +1,10 @@
-<div class="dashboard-nav" {{action toggleProperty "active" on="swipeLeft"}}>
-  <button {{action toggleProperty "active"}} id="burger" class="fa fa-bars dashboard-nav__hamburger"></button>
-  {{!-- {{#if menu}} --}}
-  <div class="menu-container {{if active "slide"}}">
-    <ul class="dashboard-menu">
-      {{yield (action toggleProperty "active")}}
-    </ul>
-    <button {{action toggleProperty "active"}} class="dashboard-menu__list-item solefood">Close</button>
-  </div>
-  {{!-- {{/if}} --}}
-  <h2 class="dashboard-nav__greeting">Hello, {{user.firstName}}</h2>
+<button {{action toggleProperty "active"}} id="burger" class="fa fa-bars dashboard-nav__hamburger"></button>
+{{!-- {{#if menu}} --}}
+<div class="menu-container {{if active "slide"}}">
+  <ul class="dashboard-menu">
+    {{yield (action toggleProperty "active")}}
+  </ul>
+  <button {{action toggleProperty "active"}} class="dashboard-menu__list-item solefood">Close</button>
 </div>
+{{!-- {{/if}} --}}
+<h2 class="dashboard-nav__greeting">Hello, {{user.firstName}}</h2>
