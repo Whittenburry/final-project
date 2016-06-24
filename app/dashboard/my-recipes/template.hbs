@@ -1,15 +1,17 @@
 <div class="page">
-  <h1 class="solefood">My Recipes</h1>
+  <h1 class="solefood my-recipes">My Recipes</h1>
 
   {{#each (filter-by "liked" true model.responses) as |response|}}
     {{recipe-card recipe=response.recipe}}
   {{/each}}
 
-  {{#if model.responses}}
-    <button {{action resetLikes model}}>Reset Likes</button>
-  {{else}}
-    <h3 class="solefood">You haven't liked any recipes yet! {{#link-to "dashboard.home" class="underlined"}}Get going and discover moar!{{/link-to}}</h3>
-  {{/if}}
+  <div class="reset-container">
+    {{#if model.responses}}
+      <button class="reset-button" {{action resetLikes model}}>Reset Likes</button>
+    {{else}}
+      <h3 class="solefood my-recipes">You haven't liked any recipes yet! {{#link-to "dashboard.home" class="underlined"}}Get going and discover moar!{{/link-to}}</h3>
+    {{/if}}
+  </div>
 
   {{outlet}}
 </div>

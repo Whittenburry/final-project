@@ -1,0 +1,21 @@
+.my-recipes {
+  max-width: $max-content-width;
+  margin: auto;
+  padding: $gutter 0 0 $gutter;
+}
+
+.reset-container {
+  max-width: $max-content-width;
+  margin: auto;
+  padding-left: $gutter;
+
+  &__button {
+    background: transparent;
+    color: $brand-secondary;
+    font-size: 2rem;
+  }
+}
+
+.underlined {
+  margin-left: 0;
+}
